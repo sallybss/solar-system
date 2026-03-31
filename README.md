@@ -96,8 +96,6 @@ Instead, it uses:
 - simple atmospheric glow effects
 - ring geometry for Saturn and Uranus
 
-This is enough for a strong prototype and is appropriate for the assignment.
-
 If more realism is needed later, the next improvements would be:
 - real NASA texture maps
 - moon systems
@@ -105,13 +103,6 @@ If more realism is needed later, the next improvements would be:
 - bump or normal maps
 - better planetary scale tuning
 
-## Presentation Summary
-
-For a short class presentation, this project can be explained as:
-
-1. The concept: an interactive Solar System visualisation built in Three.js.
-2. The prototype: users can rotate around the system, click planets, and read facts.
-3. The implementation: the project uses a Three.js scene, lights, sphere meshes, orbit animation, labels, raycasting, and overlay UI.
 
 ## Author Notes
 
