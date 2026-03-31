@@ -2,6 +2,8 @@
 
 A Three.js prototype of the Solar System built for a visualisation assignment.
 
+Live demo: https://solar-system-kkh4.onrender.com
+
 This project presents an interactive 3D solar system with:
 - the Sun and all 8 planets
 - orbit animation
