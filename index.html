@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Solar System</title>
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <header class="page-title">
+      <h1>Interactive Solar System</h1>
+    </header>
+
+    <div class="ui-shell">
+      <section class="fact-card">
+        <p class="card-kicker">Planet Fact Card</p>
+        <h2 data-card-title>Earth</h2>
+        <p class="card-subtitle" data-card-subtitle>Ocean planet with life</p>
+        <p class="card-fact" data-card-fact></p>
+        <button class="card-button" type="button" data-next-fact>
+          Show another fact
+        </button>
+      </section>
+    </div>
+
+    <div id="planet-labels" aria-label="Planet labels"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

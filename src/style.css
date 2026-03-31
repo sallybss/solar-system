@@ -1,0 +1,208 @@
+:root {
+  color-scheme: dark;
+  --panel-bg: rgba(7, 12, 24, 0.76);
+  --panel-border: rgba(159, 187, 255, 0.16);
+  --panel-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+  --text-main: #eef3ff;
+  --text-dim: #a8b6d9;
+  --accent: #7cc7ff;
+  --accent-strong: #cbeeff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(30, 58, 117, 0.28), transparent 36%),
+    radial-gradient(circle at 20% 20%, rgba(255, 164, 71, 0.12), transparent 20%),
+    #02040a;
+  color: var(--text-main);
+  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+#bg {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ui-shell {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1.5rem;
+  pointer-events: none;
+}
+
+.fact-card {
+  width: min(26rem, calc(100vw - 3rem));
+  padding: 1.1rem 1.2rem 1.2rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 22px;
+  background: var(--panel-bg);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--panel-shadow);
+}
+
+.page-title {
+  position: fixed;
+  top: 6rem;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  width: min(100%, 42rem);
+  padding: 0 1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.card-kicker {
+  margin: 0 0 0.45rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.page-title h1,
+.fact-card h2 {
+  margin: 0;
+  line-height: 0.96;
+}
+
+.page-title h1 {
+  font-size: clamp(1rem, 4.2vw, 2.5rem);
+  letter-spacing: 0.02em;
+  text-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+}
+
+.card-subtitle,
+.card-fact {
+  margin: 0.75rem 0 0;
+  color: var(--text-dim);
+  line-height: 1.45;
+  font-size: 0.96rem;
+}
+
+.card-fact {
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.fact-card {
+  margin-left: 1rem;
+  pointer-events: auto;
+}
+
+.card-button {
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 15px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, #5abfff, #88d8ff);
+  color: #05101f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+  box-shadow: 0 10px 30px rgba(90, 191, 255, 0.28);
+}
+
+.card-button:hover {
+  transform: translateY(-1px);
+}
+
+#planet-labels {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.planet-label {
+  position: absolute;
+  border: 1px solid rgba(162, 198, 255, 0.24);
+  border-radius: 999px;
+  padding: 0.38rem 0.72rem;
+  background: rgba(8, 14, 30, 0.78);
+  color: var(--accent-strong);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+}
+
+.planet-label:hover,
+.planet-label.is-active {
+  border-color: rgba(170, 222, 255, 0.72);
+  background: rgba(17, 36, 68, 0.92);
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.planet-label.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lil-gui.root {
+  --background-color: rgba(7, 12, 24, 0.78);
+  --text-color: #eef3ff;
+  --title-background-color: rgba(124, 199, 255, 0.14);
+  --widget-color: rgba(97, 127, 191, 0.38);
+  --hover-color: rgba(124, 199, 255, 0.26);
+  z-index: 20;
+}
+
+@media (max-width: 900px) {
+  .ui-shell {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .ui-shell {
+    padding: 1rem;
+  }
+
+  .fact-card {
+    width: min(100%, calc(100vw - 2rem));
+    padding: 0.95rem 1rem 1rem;
+    border-radius: 18px;
+  }
+
+  .page-title {
+    top: 1.5rem;
+    padding: 0 0.8rem;
+  }
+
+  .page-title h1 {
+    font-size: clamp(1.5rem, 8vw, 2.3rem);
+  }
+
+  .card-subtitle,
+  .card-fact {
+    font-size: 0.9rem;
+  }
+
+  .planet-label {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.62rem;
+  }
+}
